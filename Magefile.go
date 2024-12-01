@@ -17,3 +17,12 @@ func Run() error {
 	cmd.Stderr = os.Stderr
 	return cmd.Run()
 }
+
+// Test runs the tests for the application.
+func Test() error {
+	fmt.Println("Running tests...")
+	cmd := exec.Command("go", "test", "./...")
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	return cmd.Run()
+}
