@@ -26,3 +26,11 @@ func Test() error {
 	cmd.Stderr = os.Stderr
 	return cmd.Run()
 }
+
+func Migrate() error {
+	fmt.Println("Migrating the database...")
+	cmd := exec.Command("goose", "-dir", "data/sql/migrations", "postgres", "user=postgres password=mysecretpassword host=localhost dbname=totp_practice sslmode=disable", "up")
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	return cmd.Run()
+}

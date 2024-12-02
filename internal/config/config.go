@@ -14,6 +14,9 @@ type Config struct {
 	Server struct {
 		Port int `koanf:"port"`
 	} `koanf:"server"`
+	Database struct {
+		ConnectionString string `koanf:"connection_string"`
+	} `koanf:"database"`
 }
 
 // LoadConfig loads configuration from file and environment variables

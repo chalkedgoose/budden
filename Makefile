@@ -14,3 +14,4 @@ install-tools:
 	fi
 	brew install mage
 	brew install goose
+	brew install sqlc
