@@ -2,7 +2,8 @@ version: "2"
 sql:
   - schema: "data/sql/migrations"
     queries: "data/sql/queries"
-    engine: "sqlite"
+    engine: "postgresql"
     gen:
       go:
         out: "gen/dbstore"
+        sql_package: "pgx/v5"

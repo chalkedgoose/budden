@@ -1,5 +1,8 @@
 {
     "server": {
         "port": 8080
+    },
+    "database": {
+        "connection_string": "user=postgres password=mysecretpassword host=localhost dbname=totp_practice sslmode=disable"
     }
 }
